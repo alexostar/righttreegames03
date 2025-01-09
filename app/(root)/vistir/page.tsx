@@ -1,14 +1,5 @@
-// Removed max-w-[200px] from the div surrounding StatusCard
-/*
-Original second div
-        style={{
-          backgroundImage:
-            'url("https://hlkyrtglhpmrhzudaqzu.supabase.co/storage/v1/object/public/vin2024/SHM-steinadalur-DSC_4631.jpg")',
-        }}>
-*/
-// Removed min-h-screen from the third div
-
 import { StatusCard } from './_components/StatusCard';
+import Image from 'next/image';
 
 import { prisma } from '@/db/prisma';
 
@@ -30,9 +21,16 @@ export default async function Vistir() {
   }
 
   return (
-    <main className='min-h-screen bg-cover bg-center bg-no-repeat'>
-      <div className='bg-recipe-sage'>
-        <div className=' bg-black/50 py-12 px-4 sm:px-6 lg:px-8'>
+    <main className='min-h-screen'>
+      <div className='relative'>
+        <Image
+          src='/images/Steinadalur_SHM_4631.jpg'
+          alt='Background landscape'
+          fill
+          priority
+          className='object-cover z-0'
+        />
+        <div className='relative z-10 bg-black/50 py-12 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-5xl mx-auto'>
             <div className='text-center'>
               <h1 className='text-2xl font-bold text-white/80 mt-4 mb-4'>
@@ -57,7 +55,7 @@ export default async function Vistir() {
       </div>
 
       <div className='container max-w-5xl mx-auto flex flex-col justify-center items-center py-8'>
-        <h3 className='text-muted-foreground text-xl font-bold mb-4'>
+        <h3 className='text-muted-foreground text-2xl font-bold mb-4'>
           Rétt tré á réttum stað
         </h3>
         <p className='text-muted-foreground text-lg'>
