@@ -1,4 +1,4 @@
-//import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 //import { APP_NAME } from '@/lib/constants';
 import Menu from './menu';
@@ -9,14 +9,14 @@ const Header = () => {
       <div className='wrapper flex-between'>
         <div className='flex-start'>
           <Link href='/' className='flex-start'>
-            {/*<Image
+            <Image
               priority={true}
-              src='/images/logo.svg'
-              width={48}
-              height={48}
-              alt={`${APP_NAME} logo`}
-            />*/}
-            <span className='hidden lg:block font-bold text-2xl ml-3'>
+              src='/images/VIN-logo.svg'
+              width={32}
+              height={32}
+              alt='VIN logo'
+            />
+            <span className='hidden lg:block font-semibold text-xl ml-3 text-muted-foreground'>
               Rétt tré á réttum stað
             </span>
           </Link>
