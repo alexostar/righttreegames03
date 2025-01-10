@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { signInDefaultValues } from '@/lib/constants';
-import Link from 'next/link';
+//import Link from 'next/link';
 
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
@@ -24,7 +24,7 @@ const CredentialsSignInForm = () => {
     const { pending } = useFormStatus();
     return (
       <Button disabled={pending} className='w-full' variant='default'>
-        {pending ? 'Signing In...' : 'Sign In with credentials'}
+        {pending ? 'Innskráning ...' : 'Sráðu þig inn'}
       </Button>
     );
   };
@@ -34,7 +34,7 @@ const CredentialsSignInForm = () => {
       <div className='space-y-6'>
         <div>
           <input type='hidden' name='callbackUrl' value={callbackUrl} />
-          <Label htmlFor='email'>Email</Label>
+          <Label htmlFor='email'>Netfang</Label>
           <Input
             id='email'
             name='email'
@@ -45,7 +45,7 @@ const CredentialsSignInForm = () => {
           />
         </div>
         <div>
-          <Label htmlFor='password'>Password</Label>
+          <Label htmlFor='password'>Lykilorð</Label>
           <Input
             id='password'
             name='password'
@@ -62,10 +62,11 @@ const CredentialsSignInForm = () => {
           <div className='text-center text-destructive'>{data.message}</div>
         )}
         <div className='text-sm text-center text-muted-foreground'>
-          Don&apos;t have an account?{' '}
-          <Link target='_self' className='link' href='/sign-up'>
+          Aðeins fyrir ritstjóra og þátttakendur í verkefninu Rétt tré á réttum
+          stað
+          {/*<Link target='_self' className='link' href='/sign-up'>
             Sign Up
-          </Link>
+          </Link>*/}
         </div>
       </div>
     </form>

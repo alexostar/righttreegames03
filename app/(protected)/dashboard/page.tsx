@@ -4,7 +4,7 @@ import { SessionProvider } from 'next-auth/react';
 //import content components
 
 export const metadata: Metadata = {
-  title: 'Customer Profile',
+  title: 'Admin dashboard',
 };
 
 const DashboardPage = async () => {
@@ -12,7 +12,7 @@ const DashboardPage = async () => {
 
   return (
     <SessionProvider session={session}>
-      <div className='max-w-md mx-auto space-y-4'>
+      <div className='flex-center min-h-screen w-full'>
         <h2 className='h2-bold'>Dashboard</h2>
       </div>
     </SessionProvider>

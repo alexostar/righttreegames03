@@ -39,13 +39,13 @@ const SignIn = async (props: {
             <Image
               priority={true}
               src='/images/logo.svg'
-              width={100}
-              height={100}
+              width={80}
+              height={80}
               alt={`${APP_NAME} logo`}
             />
           </Link>
-          <CardTitle className='text-center'>Sign In</CardTitle>
-          <CardDescription className='text-center'>
+          <CardTitle className='text-center'>Innskráning</CardTitle>
+          <CardDescription className='text-center hidden'>
             Select a method to sign in to your account
           </CardDescription>
         </CardHeader>
