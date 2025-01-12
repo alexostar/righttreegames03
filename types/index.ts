@@ -12,6 +12,4 @@ export type Product = z.infer<typeof insertProductSchema> & {
 export type Ecosystem = z.infer<typeof insertEcosystemSchema> & {
   id: number;
   slug: string;
-  createdAt: Date;
-  updatedAt?: Date;
 };

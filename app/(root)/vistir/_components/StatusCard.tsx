@@ -1,8 +1,9 @@
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
-//import { Ecosystem } from '@/types';
+import { Ecosystem } from '@/types';
 // Change to import from types
+/*
 type Ecosystem = {
   id: number;
   title: string;
@@ -10,6 +11,7 @@ type Ecosystem = {
   content: string;
   slug: string;
 };
+*/
 
 import Link from 'next/link';
 

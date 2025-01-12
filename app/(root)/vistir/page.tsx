@@ -3,8 +3,9 @@ import Image from 'next/image';
 
 import { prisma } from '@/db/prisma';
 
-//import { Ecosystem } from '@/types';
+import { Ecosystem } from '@/types';
 // Change to import from types
+/*
 type Ecosystem = {
   id: number;
   title: string;
@@ -12,6 +13,7 @@ type Ecosystem = {
   content: string;
   slug: string;
 };
+*/
 
 export default async function Vistir() {
   const ecosystems: Ecosystem[] = await prisma.ecosystem.findMany();
