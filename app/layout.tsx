@@ -4,6 +4,9 @@ import '@/assets/styles/globals.css';
 
 import { ThemeProvider } from '@/components/theme-provider';
 
+import Footer from '@/components/footer';
+import Header from '@/components/shared/header';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -33,7 +36,11 @@ export default function RootLayout({
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
-          {children}
+          <div className='min-h-screen flex flex-col'>
+            <Header />
+            <main className='flex-1 flex flex-col'>{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

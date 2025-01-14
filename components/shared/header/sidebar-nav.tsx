@@ -42,13 +42,18 @@ export default function SideBarNav() {
           </div>
 
           <div className='flex items-center justify-between pl-4'>
-            <MobileLink onOpenChange={setOpen} href='/demo/typography'>
-              First route
+            <MobileLink onOpenChange={setOpen} href='/kort/verndad'>
+              Verndad land (kort)
             </MobileLink>
           </div>
           <div className='flex items-center justify-between pl-4'>
-            <MobileLink onOpenChange={setOpen} href='/demo/login'>
-              Protected route
+            <MobileLink onOpenChange={setOpen} href='/kort/verndad'>
+              Verndad land (kort)
+            </MobileLink>
+          </div>
+          <div className='flex items-center justify-between pl-4'>
+            <MobileLink onOpenChange={setOpen} href='/about'>
+              Um Rétt tré
             </MobileLink>
             <Lock className='h-4 w-4' />
           </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import ModeToggle from './mode-toggle';
 import SideBarNav from './sidebar-nav';
 import { UserRound } from 'lucide-react';
@@ -11,11 +13,11 @@ const Menu = () => {
         <nav className='flex w-full max-w-xs gap-1'>
           <ModeToggle />
           <SideBarNav />
-          <Button variant='outline' size='icon' asChild>
-            <Link href='/dashboard'>
+          <Link href='/kort/about'>
+            <Button variant='outline' size='icon'>
               <UserRound className='h-5 w-5' />
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </nav>
       </div>
     </>
